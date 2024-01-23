@@ -1,13 +1,11 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { StanfordResume } from "../../components/templates/stanfordResume/StanfordResume";
 import Style from "./Dashboard.module.css";
-import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { LeftForm } from "../../components/leftForm/LeftForm";
 // eslint-disable-next-line
 // @ts-ignore
 import html2pdf from "html2pdf.js";
 import { useStore } from "../../util/resumeStateHandler";
-import IconEmail from "./images/icon_email.svg";
 import IconExport from "./images/icon_export.svg";
 import { LocalImageLoader } from "../../components/LocalImageLoader";
 
@@ -63,12 +61,12 @@ export function Dashboard() {
                     const _name = resumeData.basicInfo.fullName.value || resumeData.basicInfo.fullName.placeholder;
                     const element = document.getElementById("resumePreview"); // 替换为你的div的id
                     html2pdf().set({
-                        margin: [23, 26, 20, 26],
+                        margin: [ 23, 26, 20, 26 ],
                         filename: `${_name}_resume.pdf`, // 设置生成的PDF文件名
                         image: { type: "jpeg", quality: 1.0 },
                         jsPDF: { unit: "pt", format: "a4", orientation: "portrait" },
                         pagebreak: {
-                            mode: ["css", "avoid-all"],
+                            mode: [ "css", "avoid-all" ],
                         },
                     }).from(element).save();
                 }}

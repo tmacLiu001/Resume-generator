@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import Style from "./LeftForm.module.css";
 import IconClose from "./images/icon_close.svg";
-import IconMenu from "./images/icon_menu.svg";
 import IconCopy from "./images/icon_copy.svg";
 import IconDelete from "./images/icon_delete.svg";
 import { LocalImageLoader } from "../LocalImageLoader";
@@ -10,8 +9,6 @@ import {
     useStore,
     ResumeSectionName,
     ResumeState,
-    BasicInfo,
-    EducationInfo,
 } from "../../util/resumeStateHandler";
 import eventBus, { EventName } from "../../util/eventHandler";
 
@@ -87,7 +84,7 @@ const SkillsList = [
     },
 ];
 
-const TextareaKeys = ["degree", "otherInfo", "experience", "skills"];
+const TextareaKeys = [ "degree", "otherInfo", "experience", "skills" ];
 
 type FormListItem = {
     title: string;
@@ -109,21 +106,17 @@ type InfoWithIndex = {
 export function LeftForm() {
     const _resumeData = useStore.getState();
 
-    const [showModal, setShowModal] = useState(false);
-    const [modalTop, setModalTop] = useState(42);
-    const [editSectionName, setEditSectionName] = useState("");
-    const [expIndex, setExpIndex] = useState(0);
-    const [formList, setFormList] = useState<FormListItem[]>([]);
-    const [keywordsValue, setKeywordsValue] = useState("");
-    const [generatedExp, setGeneratedExp] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
+    const [ showModal, setShowModal ] = useState(false);
+    const [ modalTop, setModalTop ] = useState(42);
+    const [ editSectionName, setEditSectionName ] = useState("");
+    const [ expIndex, setExpIndex ] = useState(0);
+    const [ formList, setFormList ] = useState<FormListItem[]>([]);
+    const [ keywordsValue, setKeywordsValue ] = useState("");
+    const [ generatedExp, setGeneratedExp ] = useState("");
+    const [ isLoading, setIsLoading ] = useState(false);
 
     const resumeDataRef = useRef(_resumeData);
     const isLoadingRef = useRef(isLoading);
-
-    const divRef1 = useRef<HTMLDivElement>(null);
-    const divRef2 = useRef<HTMLDivElement>(null);
-    const lineRef = useRef<SVGPathElement>(null);
 
     useEffect(() => {
         eventBus.on(EventName.EditForm, editFormProps => {
@@ -411,7 +404,7 @@ export function LeftForm() {
             id={"form-modal"}
             className={Style.container}
             style={{
-                // display: showModal ? "block" : "none",
+                display: showModal ? "block" : "none",
                 top: modalTop,
             }}
         >
@@ -504,46 +497,46 @@ export function LeftForm() {
                         {(editSectionName.includes(ResumeSectionName.Experience) ||
                             editSectionName.includes(ResumeSectionName.LeadershipExp) ||
                             editSectionName === ResumeSectionName.Skills) && (
-                                <div
-                                    className={`${Style.gnrIcon} flex-double-center cursor-pointer`}
-                                    style={{ marginRight: 12 }}
-                                    onClick={() => {
-                                        handleDelete();
-                                    }}
-                                >
-                                    <LocalImageLoader
-                                        width={20}
-                                        height={21}
-                                        path={IconDelete}
-                                    />
-                                </div>
-                            )}
+                            <div
+                                className={`${Style.gnrIcon} flex-double-center cursor-pointer`}
+                                style={{ marginRight: 12 }}
+                                onClick={() => {
+                                    handleDelete();
+                                }}
+                            >
+                                <LocalImageLoader
+                                    width={20}
+                                    height={21}
+                                    path={IconDelete}
+                                />
+                            </div>
+                        )}
                         {(editSectionName.includes(ResumeSectionName.Experience) ||
                             editSectionName.includes(ResumeSectionName.LeadershipExp)) && (
-                                <div
-                                    className={`${Style.gnrIcon} flex-double-center cursor-pointer`}
-                                    onClick={() => {
-                                        handleDuplicate();
-                                    }}
-                                >
-                                    <LocalImageLoader
-                                        width={20}
-                                        height={20}
-                                        path={IconCopy}
-                                    />
-                                </div>
-                            )}
+                            <div
+                                className={`${Style.gnrIcon} flex-double-center cursor-pointer`}
+                                onClick={() => {
+                                    handleDuplicate();
+                                }}
+                            >
+                                <LocalImageLoader
+                                    width={20}
+                                    height={20}
+                                    path={IconCopy}
+                                />
+                            </div>
+                        )}
                     </div>
                     <div className={"flex-row-center"}>
                         {!(editSectionName.includes(ResumeSectionName.Experience) ||
                             editSectionName.includes(ResumeSectionName.LeadershipExp)) && (
-                                <div
-                                    className={`${Style.footerBtn} flex-double-center`}
-                                    style={{ opacity: 0.4, marginRight: 16 }}
-                                >
-                                    {"Generate"}
-                                </div>
-                            )}
+                            <div
+                                className={`${Style.footerBtn} flex-double-center`}
+                                style={{ opacity: 0.4, marginRight: 16 }}
+                            >
+                                {"Generate"}
+                            </div>
+                        )}
                         <div
                             className={`${Style.footerBtn} flex-double-center cursor-pointer`}
                             onClick={handleClickDone}
@@ -646,7 +639,7 @@ const CustomTextarea: React.FC<CustomTextareaProps> = ({
         if (_div) {
             _div.innerHTML = initialTextareaData;
         }
-    }, [initialTextareaData]);
+    }, [ initialTextareaData ]);
 
     useEffect(() => {
         const _div = divRef.current;
@@ -670,7 +663,7 @@ const CustomTextarea: React.FC<CustomTextareaProps> = ({
                 // _div.innerHTML = processText(placeholder);
             }
         }
-    }, [value]);
+    }, [ value ]);
 
     function processText(text: string) {
         // 先替换文本中的行首的 `- ` 为 `• `

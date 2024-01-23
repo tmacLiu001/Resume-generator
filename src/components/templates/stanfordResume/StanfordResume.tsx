@@ -14,11 +14,11 @@ export function StanfordResume(props: ResumeProps) {
         resumeData: propsResume,
     } = props;
 
-    const [resumeData, setResumeData] = useState(propsResume);
+    const [ resumeData, setResumeData ] = useState(propsResume);
 
     useEffect(() => {
         setResumeData(propsResume);
-    }, [propsResume]);
+    }, [ propsResume ]);
 
     return <div className={Style.page}>
         <div id="resumePreview" className={`${Style.cvPreviewContainer}`} >
@@ -259,7 +259,7 @@ const CustomDiv: React.FC<CustomDivProps> = ({ contentValue }) => {
                 _div.innerHTML = formattedText;
             }
         }
-    }, [contentValue]);
+    }, [ contentValue ]);
 
     return (
         <div
