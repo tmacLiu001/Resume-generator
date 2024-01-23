@@ -1,0 +1,37 @@
+.page{
+    /* height: 100vh; */
+    min-height: 100%;
+    width: fit-content;
+    min-width: 100%;
+
+    color:#FFF;
+
+    background-color: #181818;
+}
+
+.mainSection{
+    /* flex: 1; */
+    /* justify-content: center; */
+    /* height: calc(100% - 2vh - 9vh); */
+    /* min-width: 50vw; */
+    /* padding-top: 2vh; */
+    padding-top: 42px;
+    padding-bottom: 60px;
+}
+
+.leftSection {
+    /* height: 100%; */
+    width: 750px;
+    min-width: 750px;
+}
+
+.rightSection{
+    /* height: 100%; */
+    width: 180px;
+    padding-top: 42px;
+    padding-left: 31px;
+}
+
+.transform-component-module_wrapper{
+    overflow: hidden;
+}

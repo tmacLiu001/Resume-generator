@@ -1,0 +1,94 @@
+.page{
+    box-sizing: border-box;
+    height: fit-content;
+    min-height: 297mm;
+    width: 210mm;
+    padding: 23px 26px 20px;
+
+    background: #FFF;
+}
+.cvPreviewContainer{
+    /* width: calc(210mm - 56px); */
+    font-family: Times New Roman;
+    page-break-after: always;
+    color: #000;
+
+    background: #FFF;
+
+    user-select: none;
+}
+
+.sectionWrapper:hover,
+.sectionWrapper.active {
+    border-radius: 4px;
+
+    background-color:#E9E9E9;
+    cursor: pointer;
+}
+
+.sectionWrapper:hover>.editIcon{
+    display: flex;
+}
+
+.editIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    height: 32px;
+    width: 32px;
+
+    background-color:#E9E9E9 ;
+}
+
+.editIcon>img{
+    height: 14px;
+    width: 14px;
+}
+
+.userName{
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+}
+
+.basicInfo{
+    font-size: 17px;
+    text-align: center;
+}
+
+.horizontalDivider{
+    height: 2px;
+    width: 100%;
+
+    background-color: #000;
+}
+
+.sectionTitle{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.sectionContent{
+    font-size: 18px;
+}
+
+.subtitle{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.subtitle>span{
+    font-style: italic;
+    font-weight: 400;
+}
+
+.subtitle>div{
+    font-weight: 400;
+}
+
+.date{
+    font-size: 17px;
+}

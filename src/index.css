@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 10px;
+}
+
+#root {
+    height: 100%;
+}
+
+ul{
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+li {
+    list-style-type: disc; /* Sets the bullet style */
+}
+
+a {
+    text-decoration: none;
+
+    /* -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; */
+
+    -webkit-tap-highlight-color: transparent;
+    -moz-user-focus: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-double-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.width-per100 {
+    width: 100%;
+}
+
+.height-per100 {
+    height: 100%;
+}
+
+.double-per100 {
+    height: 100%;
+    width: 100%;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.select-none {
+    user-select: none;
+}
+
+.hover-line:hover {
+    text-decoration: underline;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"]{
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.text-ellipsis {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.line-two-ellipsis {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.hide-scrollbar {
+    overflow: auto;
+
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+}

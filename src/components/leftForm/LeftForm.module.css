@@ -1,0 +1,271 @@
+.container {
+    /* position: fixed; */
+    /* z-index: 1; */
+
+    /* display: none; */
+    /* padding-top: 42px;
+    padding-left: 44px; */
+    position: absolute;
+    left: 44px;
+}
+
+.modal {
+    width: 660px;
+    border-radius: 20px;
+    padding-bottom: 45px;
+
+    background: #21232C;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 4px;
+    padding-right: 10px;
+
+    /* background: pink; */
+}
+
+.close {
+    padding: 12px;
+
+    /* background: red; */
+    cursor: pointer;
+}
+
+.listWrap {
+    /* background: grey; */
+    padding-top: 27px;
+}
+
+.listItem {
+    margin-top: 37px;
+}
+
+.listItem:first-child {
+    margin-top: 0;
+}
+
+.footer {
+    width: 600px;
+    margin: auto;
+    margin-top: 48px;
+}
+
+.footerBtn {
+    height: 45px;
+    width: 117px;
+    border-radius: 4px;
+
+    font-size: 16px;
+    font-family: "Roboto Mono 700", Arial, sans-serif;
+    color: #FFF;
+
+    background: #6723FF;
+}
+
+.gnrBtn {
+    margin: auto;
+    margin-top: 28px;
+}
+
+.CIWrap {
+    position: relative;
+
+    box-sizing: border-box;
+    height: 45px;
+    width: 600px;
+    margin: auto;
+    border: 1px solid #C0C0C0;
+    border-radius: 4px;
+}
+
+.CIWrap:focus-within {
+    border: 1px solid #FFF;
+}
+
+.CILabel {
+    position: absolute;
+    top: -14px;
+    left: 8px;
+
+    padding: 0 4px;
+
+    font-size: 16px;
+    font-family: "Roboto Mono 400", Arial, sans-serif;
+    color: #C0C0C0;
+
+    background: #21232C;
+}
+
+.CIWrap:focus-within .CILabel {
+    color: #FFF;
+}
+
+.CIInput {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding-left: 20px;
+
+    font-size: 16px;
+    font-family: "Roboto Mono 700", Arial, sans-serif;
+    color: #FFF;
+
+    background: none;
+    outline: none;
+
+    caret-color: #FFF;
+}
+
+.CIInput::placeholder {
+    color: #999;
+}
+
+.CTWrap {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 600px;
+    margin: auto;
+    border: 1px solid #C0C0C0;
+    border-radius: 4px;
+    /* background: pink; */
+}
+
+.CTLabel {
+    position: absolute;
+    top: -14px;
+    left: 8px;
+
+    padding: 0 4px;
+
+    font-size: 16px;
+    font-family: "Roboto Mono 400", Arial, sans-serif;
+    color: #C0C0C0;
+
+    background: #21232C;
+}
+
+.CTLabel.gnr {
+    background: #3D3D3D;
+}
+
+.CTEl {
+    width: 100%;
+    border: none;
+    padding: 0;
+
+    background: none;
+
+    resize: none;
+    /* resize: vertical; */
+}
+
+.CTDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* bottom: 24px; */
+    bottom: 0;
+    left: 0;
+
+    border-radius: 8px;
+    padding: 12px 20px;
+    overflow: auto;
+
+    font-size: 16px;
+    font-family: "Roboto Mono 700", Arial, sans-serif;
+    color: #FFF;
+
+    outline: none;
+
+    caret-color: #FFF;
+}
+
+.CTDiv.placeholder {
+    color: #999;
+}
+
+
+.svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    background: white;
+}
+
+.gnrLine {
+    height: 73px;
+    width: 1px;
+    margin: auto;
+
+    background: #E9E9E9;
+}
+
+.gnrModal {
+    box-sizing: border-box;
+    width: 630px;
+    margin: auto;
+    border-radius: 4px;
+    padding: 20px 14px;
+
+    background: #3D3D3D;
+}
+
+.gnrTitle {
+    padding-left: 16px;
+
+    font-size: 20px;
+    font-family: "Roboto Mono 700", Arial, sans-serif;
+    color: #4ADE80;
+}
+
+.gnrIcon {
+    height: 42px;
+    width: 42px;
+    border-radius: 100px;
+
+    background: #5C5C5C;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > div {
+    height: 6px;
+    width: 6px;
+    margin: 0 3px;
+    border-radius: 50%;
+
+    background: #FFF;
+
+    animation: bounce 0.6s infinite alternate;
+}
+
+.loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
