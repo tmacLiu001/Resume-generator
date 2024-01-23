@@ -404,7 +404,7 @@ export function LeftForm() {
             id={"form-modal"}
             className={Style.container}
             style={{
-                display: showModal ? "block" : "none",
+                // display: showModal ? "block" : "none",
                 top: modalTop,
             }}
         >
